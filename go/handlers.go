@@ -85,6 +85,7 @@ func (c routerCtx) GreyscaleImage(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "image/jpeg")
 		w.Header().Set("Content-Length", strconv.Itoa(len(val)))
 		w.Write(val)
+		w.Write(val)
 		return
 	}
 	log.Println("cache get:", err)
